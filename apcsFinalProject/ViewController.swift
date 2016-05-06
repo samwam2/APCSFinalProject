@@ -5,7 +5,7 @@
 //  Created by ShowalterS18 on 5/4/16.
 //  Copyright © 2016 Sam Showalter. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,13 +15,24 @@ class ViewController: UIViewController {
     
 
     @IBOutlet var textFeild: UITextField!
-    @IBAction func TestButton(sender: AnyObject) {
-        
+    @IBAction func buttonTest(sender: AnyObject) {
         getText()
-        printcharterBycharter()
-        //print(emojiArray)
+        //printcharterBycharter()
+        print(emojiArray)
+        //toText.printTest(toText)
+        //toText.printTestFunc()
+        
         print("finshed")
         
+    }
+    
+     @IBOutlet internal var convertedToTextHere: UITextField!
+    var text: String = ""
+    func putText(text: String) -> String {
+        var place = text
+        place = convertedToTextHere.placeholder!
+        
+        return text
     }
     
     override func viewDidLoad() {

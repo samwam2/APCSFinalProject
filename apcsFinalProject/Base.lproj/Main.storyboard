@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,29 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundImgae" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-uU-10Q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hi" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je1-0Z-2cu">
                                 <rect key="frame" x="9" y="47" width="206" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0me-Oi-TE1">
-                                <rect key="frame" x="243" y="126" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-Ct-rZF">
+                                <rect key="frame" x="194" y="172" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="TestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJD-oz-GPc"/>
+                                    <action selector="buttonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vz4-vv-jJ3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-pr-rdi">
+                                <rect key="frame" x="385" y="97" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8eP-uU-10Q" secondAttribute="bottom" id="0ua-kF-MmB"/>
+                            <constraint firstItem="8eP-uU-10Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Ftw-qx-KSc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8eP-uU-10Q" secondAttribute="trailing" constant="-20" id="Saj-Mc-GKR"/>
+                            <constraint firstItem="8eP-uU-10Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cFe-Be-Tdl"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="testButton" destination="0me-Oi-TE1" id="D2T-W5-qml"/>
+                        <outlet property="convertedToTextHere" destination="sgT-pr-rdi" id="VeF-Qy-MB4"/>
                         <outlet property="textFeild" destination="Je1-0Z-2cu" id="dJh-0j-pnZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="490"/>
+            <point key="canvasLocation" x="845" y="514"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backGroundImgae" width="375" height="667"/>
+    </resources>
 </document>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		36F9484F1CDADC1F008A3397 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F9484E1CDADC1F008A3397 /* Mixpanel.framework */; };
+		828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158541CDCF9CB00AAEA16 /* compareEmoji.swift */; };
+		828158571CDCFA9E00AAEA16 /* toText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158561CDCFA9E00AAEA16 /* toText.swift */; };
 		82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D886DD1CDA5669004DDCED /* AppDelegate.swift */; };
 		82D886E01CDA5669004DDCED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D886DF1CDA5669004DDCED /* ViewController.swift */; };
 		82D886E31CDA5669004DDCED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D886E11CDA5669004DDCED /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		311481F93CFAF524EB4599D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		36F9484E1CDADC1F008A3397 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = "Pods/../build/Debug-iphoneos/Mixpanel.framework"; sourceTree = "<group>"; };
 		4FFA76D9E5E85F2161788EC6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		828158541CDCF9CB00AAEA16 /* compareEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compareEmoji.swift; sourceTree = "<group>"; };
+		828158561CDCFA9E00AAEA16 /* toText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toText.swift; sourceTree = "<group>"; };
 		82D886DA1CDA5668004DDCED /* apcsFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apcsFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D886DD1CDA5669004DDCED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D886DF1CDA5669004DDCED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				82D886DD1CDA5669004DDCED /* AppDelegate.swift */,
 				82D886DF1CDA5669004DDCED /* ViewController.swift */,
+				828158561CDCFA9E00AAEA16 /* toText.swift */,
+				828158541CDCF9CB00AAEA16 /* compareEmoji.swift */,
 				82D886E11CDA5669004DDCED /* Main.storyboard */,
 				82D886E41CDA5669004DDCED /* Assets.xcassets */,
 				82D886E61CDA5669004DDCED /* LaunchScreen.storyboard */,
@@ -336,8 +342,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */,
 				82D886E01CDA5669004DDCED /* ViewController.swift in Sources */,
 				82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */,
+				828158571CDCFA9E00AAEA16 /* toText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +488,7 @@
 			baseConfigurationReference = F0C1FC7BBF9A16BA075EA0DA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +507,7 @@
 			baseConfigurationReference = 311481F93CFAF524EB4599D9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
