@@ -23,7 +23,7 @@ class toText { // : ViewController {
         
       //  hi = convertedToTextHere.placeholder!
       //  hi = ViewController.
-        hi = ViewController.self.putText("hi")
+       // hi = ViewController.self.putText("hi")
     }
     
 }
