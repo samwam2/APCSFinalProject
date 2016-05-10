@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36F9484F1CDADC1F008A3397 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F9484E1CDADC1F008A3397 /* Mixpanel.framework */; };
 		828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158541CDCF9CB00AAEA16 /* compareEmoji.swift */; };
 		828158571CDCFA9E00AAEA16 /* toText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158561CDCFA9E00AAEA16 /* toText.swift */; };
 		82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D886DD1CDA5669004DDCED /* AppDelegate.swift */; };
@@ -64,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36F9484F1CDADC1F008A3397 /* Mixpanel.framework in Frameworks */,
 				B367659B3245530C71266186 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
