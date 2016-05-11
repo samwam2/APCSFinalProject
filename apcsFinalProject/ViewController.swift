@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //var emojiArray: [String] = []
     var emojiArray: String = ""
     var textOnScreen = ""
+    //var test = emojiArray
+    var emojiArraryRight = Array(emojiArray.emojiArraryRight)
     
 
     @IBOutlet var textFeild: UITextField!
