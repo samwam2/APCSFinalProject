@@ -16,10 +16,13 @@ class toText { // : ViewController {
 //        convertedToTextHere.placeholder = testString
 //        
 //    }
+    
+    let string = "hi"
+    //let emojiArrayRight = string.characters.map { String($0) }
     var test = 0
     func printTestFunc() {
         
-    var hi = "test text code thing moo"
+   // var hi = "test text code thing moo"
         
       //  hi = convertedToTextHere.placeholder!
       //  hi = ViewController.

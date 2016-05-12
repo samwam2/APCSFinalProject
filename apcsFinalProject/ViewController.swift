@@ -12,9 +12,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //var emojiArray: [String] = []
     var emojiArray: String = ""
+    //var textOnScreen = ""
     var textOnScreen = ""
-    //var test = emojiArray
-    var emojiArraryRight = Array(emojiArray.emojiArraryRight)
+    let string = "hi"
+    
+    
     
 
     @IBOutlet var textFeild: UITextField!
@@ -22,7 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         getText()
         print(emojiArray)
         print("finshed")
-    //getText.()
         convertedtextisHERE.text = textOnScreen
         compare()
     }
@@ -35,6 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       convertedToTextHere.delegate = self
+       // var testArray = Array(emojiArray.testArray)
+        var emojiArrayRight = emojiArray.characters.map { String($0) }
         
     }
     override func didReceiveMemoryWarning() {
@@ -48,35 +51,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
     func getText() {
         emojiArray = textFeild.text!
+        
        // textFeild.
     }
     var compareText:String = ""
     
     func compare() {
+        var test = emojiArray.componentsSeparatedByString(", ")
+        let emojiArrayRight = emojiArray.characters.map { String($0) }
+        var indexInt = 0
+        var textInScreenArray = [String]()
+//        print("this is test")
+//        print(emojiArrayRight)
         
-      //emojiArray.startIndex
-
-      //  var indexInt: int = 0
-//        while emojiArray.isEmpty == false {
-//            
-//        }
-        
-        switch emojiArray {
-    case "😀":
-        textOnScreen = "Happy Face"
-    case "😬":
-            textOnScreen = "Ahhhh..."
-    case "😁":
-            textOnScreen = "Smilling ahhh face"
-    case "😂":
+        for index in emojiArrayRight {
+            indexInt++
+        switch emojiArray { //emojiArray
+            case "😀":
+                textOnScreen = "Happy Face"
+            textInScreenArray.append("Happy Face")
+            case "😬":
+                textOnScreen = "Ahhhh..."
+            textInScreenArray.append("Ahhhh...")
+            case "😁":
+                textOnScreen = "Smilling ahhh face"
+            case "😂":
                 textOnScreen = "Laughing so hard I amd crying"
-    case "😃":
+            case "😃":
                 textOnScreen = " happy face 2"
-    case " hi":
+            case " hi":
                 textOnScreen = "hi"
-    default:
-        textOnScreen = "no input or Error"
-}
+            default:
+                textOnScreen = "no input or Error"
+            }
+        }
+        
+         textOnScreen = textInScreenArray.joinWithSeparator("-")
+        print(textOnScreen)
         
        
     }
