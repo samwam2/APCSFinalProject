@@ -57,34 +57,58 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func compare() {
         //var test = emojiArray.componentsSeparatedByString(", ")
-        let emojiArrayRight = emojiArray.characters.map { String($0) }
+        var emojiArrayRight = emojiArray.characters.map { String($0) }
         var indexInt = 0
-       // var textInScreenArray = [String]()
-//        print("this is test")
-//        print(emojiArrayRight)
+ 
+        var tempInt = -1
         var tempString = ""
         
-        for index in emojiArrayRight {
-            indexInt += 1
-        switch emojiArrayRight { //emojiArray
-            case ["😀"]:
-                textOnScreen.append("Happy Face")
-                tempString = "hi"
-            case "😬":
-               // textOnScreen = "Ahhhh..."
-                textOnScreen.append("Ahhhh...")
+        var testArray: [String: Int]? = ["😀": 0, "😁": 1, "😂": 2]
+        
+        for indexInt in emojiArrayRight {
+            tempInt += 1
+            switch emojiArray {
+            case .Some(0):
+                textOnScreen.append("works")
+                //break
+                emojiArrayRight.removeAtIndex(tempInt)
+                print("this temp int:   \(tempInt)")
+                tempInt += 1
             case "😁":
-                textOnScreen.append("Smilling ahhh face")
+                textOnScreen.append("still world")
+               // break
             case "😂":
-                textOnScreen.append("Laughing so hard I am crying")
-            case "😃":
-                textOnScreen.append(" happy face 2")
+                textOnScreen.append("there is hope")
+                emojiArrayRight.removeAtIndex(tempInt)
+                print("this temp int:   \(tempInt)")
             default:
-                textOnScreen.append("er fuck")
+                print("this does not work, your fucked")
+                print(tempInt)
             }
         }
         
+//        for index in emojiArrayRight {
+//            indexInt += 1
+//        switch emojiArrayRight { //emojiArray
+//            case emojiArrayRight.:
+//                textOnScreen.append("Happy Face")
+//                tempString = "hi"
+//            case "😬":
+//               // textOnScreen = "Ahhhh..."
+//                textOnScreen.append("Ahhhh...")
+//            case "😁":
+//                textOnScreen.append("Smilling ahhh face")
+//            case "😂":
+//                textOnScreen.append("Laughing so hard I am crying")
+//            case "😃":
+//                textOnScreen.append(" happy face 2")
+//            default:
+//                textOnScreen.append("er fuck")
+//            }
+//        }
+        
         print(textOnScreen)
+      //  textOnScreen.removeAtIndex(indexInt)
         //print(textInScreenArray)
 
 //         textOnScreen = textInScreenArray.joinWithSeparator("-r")
