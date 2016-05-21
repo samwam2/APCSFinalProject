@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //Geters
      func getText() { emojiArray = textFeild.text! }
-
+//lol
     @IBOutlet var textFeild: UITextField!
     @IBAction func buttonTest(sender: AnyObject) {
         getText()
