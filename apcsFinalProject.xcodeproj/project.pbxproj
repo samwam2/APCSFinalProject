@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		367B03951CE42C83003422E6 /* oldCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B03941CE42C83003422E6 /* oldCode.swift */; };
 		8231878F1CECCFBF0071E9DB /* HashBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231878E1CECCFBF0071E9DB /* HashBucket.swift */; };
+		824CC3261CF4AD5000C0BB27 /* oldVeiwcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */; };
 		828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158541CDCF9CB00AAEA16 /* compareEmoji.swift */; };
 		828158571CDCFA9E00AAEA16 /* toText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158561CDCFA9E00AAEA16 /* toText.swift */; };
 		82CB07601CEF672D004D6FE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB075F1CEF672D004D6FE6 /* GoogleService-Info.plist */; };
@@ -45,6 +46,7 @@
 		36F9484E1CDADC1F008A3397 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = "Pods/../build/Debug-iphoneos/Mixpanel.framework"; sourceTree = "<group>"; };
 		4FFA76D9E5E85F2161788EC6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8231878E1CECCFBF0071E9DB /* HashBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashBucket.swift; sourceTree = "<group>"; };
+		824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oldVeiwcontroller.swift; sourceTree = "<group>"; };
 		828158541CDCF9CB00AAEA16 /* compareEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compareEmoji.swift; sourceTree = "<group>"; };
 		828158561CDCFA9E00AAEA16 /* toText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toText.swift; sourceTree = "<group>"; };
 		82CB075F1CEF672D004D6FE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -101,6 +103,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		824CC3271CF4B28600C0BB27 /* Old Classes */ = {
+			isa = PBXGroup;
+			children = (
+				824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */,
+				367B03941CE42C83003422E6 /* oldCode.swift */,
+				82CCE9941CE63C8600473B53 /* HashTable.swift */,
+				8231878E1CECCFBF0071E9DB /* HashBucket.swift */,
+			);
+			name = "Old Classes";
+			sourceTree = "<group>";
+		};
 		82D886D11CDA5668004DDCED = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +141,7 @@
 			children = (
 				82D886DD1CDA5669004DDCED /* AppDelegate.swift */,
 				82D886DF1CDA5669004DDCED /* ViewController.swift */,
-				82CCE9941CE63C8600473B53 /* HashTable.swift */,
-				8231878E1CECCFBF0071E9DB /* HashBucket.swift */,
-				367B03941CE42C83003422E6 /* oldCode.swift */,
+				824CC3271CF4B28600C0BB27 /* Old Classes */,
 				828158561CDCFA9E00AAEA16 /* toText.swift */,
 				828158541CDCF9CB00AAEA16 /* compareEmoji.swift */,
 				82D886E11CDA5669004DDCED /* Main.storyboard */,
@@ -353,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824CC3261CF4AD5000C0BB27 /* oldVeiwcontroller.swift in Sources */,
 				8231878F1CECCFBF0071E9DB /* HashBucket.swift in Sources */,
 				828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */,
 				82D886E01CDA5669004DDCED /* ViewController.swift in Sources */,

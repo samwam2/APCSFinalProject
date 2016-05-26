@@ -5,87 +5,83 @@
 //  Created by ShowalterS18 on 5/4/16.
 //  Copyright © 2016 Sam Showalter. All rights reserved.
 //
+import Foundation
 import UIKit
-//import FirebaseAnalytics
-
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    //All vars
     //var emojiArray: [String] = []
     var emojiArray: String = ""
-    var compareText:String = ""
+    //var textOnScreen = ""
+    //    var textOnScreen = ""
     var textOnScreen = [String]()
     
-    
-    //Geters
-     func getText() { emojiArray = textFeild.text! }
-//lol
-    @IBOutlet var textFeild: UITextField!
+    var emojiMap:Dictionary<String,String> = ["😀":"smile", "😁":"Smiling ahhh face", "😂":"laughing and crying", "😃": "happy face 2", "😄":"very happy", "😅":"happily shy", "😆" : "laughing with eyes closed","😉" : "wink", "😊" : "blushing", "😋" : "silly", "😎" : "cool", "😍" : "love", "😘" : "blowing a kiss", "😗" : "duck face", "😙" : "kissing", "😚" : "blush kissing", "☺️" : "grinning", "😇" : "angel", "😐" : "emotionless", "😑": "disappointed", "😶" : "mouthless", "😏" : "flirting", "😣" : "scared", "😥": "disappointed", "😮" : "shocked", "😯" : "surprised", "😪" : "crying", "😫" : "fed up", "😴" : "sleeping", "😌" : "pleased", "😛" : "tongue out", "😜" : "crazy", "😝" : "playful",  "😒" : "unimpressed", "😓" : "saddened", "😔" : "sorrow", "😕" : "confused", "😖" :"confounded", "😞" : "disappointed", "😟" : "worried", "😤" : "frustrated", "😢" : "teared up", "😭" : "sobbing", "😦" : "yawning", "😨" : "scared", "😩" : "weary", "😬" : "griming", "😰" : "concerned", "😱" : "screamed", "😳" : "embarrassed", "😵" : "dizzy", "😷" : "masked", "😡" : "very angry"]
+        @IBOutlet var textFeild: UITextField!
     @IBAction func buttonTest(sender: AnyObject) {
         getText()
-        var temp = textOnScreen.joinWithSeparator(" ")
+        //textOnScreen.removeAll(keepCapacity: true)
+        let temp = textOnScreen.joinWithSeparator(" ")
         convertedtextisHERE.text = temp
         let emojiArrayRight = emojiArray.characters.map { String($0) }
-        
+        compare()
         //compareRecure()
         print("finshed")
     }
     
-    //IBOutlet for the
-    @IBOutlet var convertedtextisHERE: UILabel!
-     
     
-    //All overides
+    
+    @IBOutlet var convertedtextisHERE: UILabel!
+    @IBOutlet internal var convertedToTextHere: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-      convertedToTextHere.delegate = self
+        //convertedToTextHere.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        print("Memory worning, FIX SAM")
+        print("Memory warning, FIX SAM")
     }
- 
-    //func that compare the user input to a hashtable and returns the vale of the key
-    //The user input is the key
+    
+    
+    
+    
+    func getText() {
+        emojiArray = textFeild.text!
+        
+        // textFeild.
+    }
+    var compareText:String = ""
+    
     func compare() {
         //var test = emojiArray.componentsSeparatedByString(", ")
         var emojiArrayRight = emojiArray.characters.map { String($0) }
-   
+        var theEmoji: String
         
-        var testArray: [String: Int]? = ["😀": 0, "😁": 1, "😂": 2]
+        for theEmoji in emojiArrayRight {
+            textOnScreen.append(emojiMap[theEmoji]!)
+        }
         
         print(textOnScreen)
- 
     }
     
-  
-
+    
+    
 }
-//for indexInt in emojiArrayRight {
-//    
-//    tempInt += 1
-//    switch emojiArray {
-//    case "😀":
-//        textOnScreen.append("works")
-//        //break
-//        emojiArrayRight.removeAtIndex(tempInt)
-//        print("this temp int:   \(tempInt)")
-//        tempInt += 1
-//    case "😁":
-//        textOnScreen.append("still world")
-//    // break
-//    case "😂":
-//        textOnScreen.append("there is hope")
-//        emojiArrayRight.removeAtIndex(tempInt)
-//        print("this temp int:   \(tempInt)")
-//    default:
-//        print("this does not work, your fucked")
-//        print(tempInt)
-//    }
-//}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 //switch emojiArrayRight { //emojiArray
 //case "😀":
 //    textOnScreen.append("Happy Face")

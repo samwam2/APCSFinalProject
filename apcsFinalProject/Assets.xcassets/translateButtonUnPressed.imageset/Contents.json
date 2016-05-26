@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6background1.png",
+      "filename" : "translate buttontranslateUN1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6background2.png",
+      "filename" : "translate buttontranslateUN2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6background3.png",
+      "filename" : "translate buttontranslateUN3.png",
       "scale" : "3x"
     }
   ],
