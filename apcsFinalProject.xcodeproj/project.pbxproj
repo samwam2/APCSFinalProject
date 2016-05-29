@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		367B03951CE42C83003422E6 /* oldCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B03941CE42C83003422E6 /* oldCode.swift */; };
+		368097681CFBA76A00C00823 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368097671CFBA76A00C00823 /* temp.swift */; };
 		8231878F1CECCFBF0071E9DB /* HashBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231878E1CECCFBF0071E9DB /* HashBucket.swift */; };
 		824CC3261CF4AD5000C0BB27 /* oldVeiwcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */; };
 		828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158541CDCF9CB00AAEA16 /* compareEmoji.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		367B03941CE42C83003422E6 /* oldCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oldCode.swift; sourceTree = "<group>"; };
+		368097671CFBA76A00C00823 /* temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		36F9484E1CDADC1F008A3397 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = "Pods/../build/Debug-iphoneos/Mixpanel.framework"; sourceTree = "<group>"; };
 		4FFA76D9E5E85F2161788EC6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8231878E1CECCFBF0071E9DB /* HashBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashBucket.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				82D886DD1CDA5669004DDCED /* AppDelegate.swift */,
 				82D886DF1CDA5669004DDCED /* ViewController.swift */,
+				368097671CFBA76A00C00823 /* temp.swift */,
 				824CC3271CF4B28600C0BB27 /* Old Classes */,
 				828158561CDCFA9E00AAEA16 /* toText.swift */,
 				828158541CDCF9CB00AAEA16 /* compareEmoji.swift */,
@@ -366,6 +369,7 @@
 			files = (
 				824CC3261CF4AD5000C0BB27 /* oldVeiwcontroller.swift in Sources */,
 				8231878F1CECCFBF0071E9DB /* HashBucket.swift in Sources */,
+				368097681CFBA76A00C00823 /* temp.swift in Sources */,
 				828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */,
 				82D886E01CDA5669004DDCED /* ViewController.swift in Sources */,
 				82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */,
