@@ -39,19 +39,20 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
     }
         @IBOutlet var textFeild: UITextField!
     @IBAction func buttonTest(sender: AnyObject) {
-        hideKeyboardWhenTappedAround()
         if textOnScreen.isEmpty == true {
-            
+            textOnScreen.insert("Translation:", atIndex: 0)
         } else {
             textOnScreen.removeAll()
         }
-        getText()
+        
+         getText()
          compare()
         //textOnScreen.removeAll(keepCapacity: true)
         //textOnScreen.insert("The emojis mean:", atIndex: 0)
         let temp = textOnScreen.joinWithSeparator(" ,")
         convertedtextisHERE.text = temp
-       
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         print("finshed")
     }
     
@@ -59,12 +60,14 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
     
     @IBOutlet var convertedtextisHERE: UILabel!
     @IBOutlet internal var convertedToTextHere: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //convertedToTextHere.delegate = self
         self.hideKeyboardWhenTappedAround()
+        
         
     }
     
@@ -74,6 +77,11 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
         print("Memory warning, FIX SAM")
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore. 
+    {
+        textFeild.resignFirstResponder()
+        return true;
+    }
     
     
     
@@ -90,8 +98,17 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
         var theEmoji: String
         
         for theEmoji in emojiArrayRight {
-            textOnScreen.append(emojiMap[theEmoji]!)
+            if emojiMap.indexForKey(theEmoji) == nil {
+                print("RETURN NIL CRASH")
+          
+            } else {
+                textOnScreen.append(emojiMap[theEmoji]!)
+            }
         }
+        
+        
+        
+        
         
         print(textOnScreen)
     }
@@ -112,20 +129,5 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
-//switch emojiArrayRight { //emojiArray
-//case "😀":
-//    textOnScreen.append("Happy Face")
-//    tempString = "hi"
-//case "😬":
-//    // textOnScreen = "Ahhhh..."
-//    textOnScreen.append("Ahhhh...")
-//case "😁":
-//    textOnScreen.append("Smilling ahhh face")
-//case "😂":
-//    textOnScreen.append("Laughing so hard I am crying")
-//case "😃":
-//    textOnScreen.append(" happy face 2")
-//default:
-//    textOnScreen.append("er fuck")
-//}
+
 

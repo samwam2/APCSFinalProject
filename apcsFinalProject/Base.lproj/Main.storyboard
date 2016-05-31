@@ -45,7 +45,7 @@
                                     <action selector="buttonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vz4-vv-jJ3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5N-he-mHN">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5N-he-mHN">
                                 <rect key="frame" x="95" y="103" width="128" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="e4O-HN-nKX"/>
@@ -53,6 +53,17 @@
                                 <state key="normal" title="App Crashed?"/>
                                 <connections>
                                     <action selector="crashButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxS-Nx-iMF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSv-BQ-24m">
+                                <rect key="frame" x="513" y="11" width="73" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Hno-36-fyM"/>
+                                    <constraint firstAttribute="height" constant="29" id="wij-n1-1D4"/>
+                                </constraints>
+                                <state key="normal" image="infoButton"/>
+                                <connections>
+                                    <segue destination="ef4-Rs-TpB" kind="show" id="pMi-af-006"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,10 +81,12 @@
                             <constraint firstItem="K09-JL-oyv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="376" id="beH-gy-Sa0"/>
                             <constraint firstItem="8eP-uU-10Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d07-L4-k0z"/>
                             <constraint firstItem="8eP-uU-10Q" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="eko-Th-hwZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QSv-BQ-24m" secondAttribute="trailing" constant="-6" id="gWG-lF-S7c"/>
                             <constraint firstAttribute="trailing" secondItem="8eP-uU-10Q" secondAttribute="trailing" id="goS-sx-YwI"/>
                             <constraint firstItem="Pqa-Ct-rZF" firstAttribute="top" secondItem="Je1-0Z-2cu" secondAttribute="bottom" constant="41" id="jnN-YR-Uy4"/>
                             <constraint firstItem="Je1-0Z-2cu" firstAttribute="top" secondItem="g5N-he-mHN" secondAttribute="bottom" constant="8" id="rve-3G-jxY"/>
                             <constraint firstItem="8eP-uU-10Q" firstAttribute="centerX" secondItem="Pqa-Ct-rZF" secondAttribute="centerX" id="vFO-MT-qhk"/>
+                            <constraint firstItem="QSv-BQ-24m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="11" id="yDG-oM-DTo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -85,9 +98,76 @@
             </objects>
             <point key="canvasLocation" x="845" y="514"/>
         </scene>
+        <!--Settings Page-->
+        <scene sceneID="QWQ-nf-D9K">
+            <objects>
+                <viewController id="ef4-Rs-TpB" customClass="settingsPage" customModule="apcsFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yFR-ME-uAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="7h6-XZ-2pb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vm0-ov-7Sc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoPage" translatesAutoresizingMaskIntoConstraints="NO" id="7iu-BB-Zqa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-AB-ABM">
+                                <rect key="frame" x="97" y="293" width="185" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="WcR-J8-ohp"/>
+                                    <constraint firstAttribute="width" constant="185" id="fCs-Qx-NIs"/>
+                                </constraints>
+                                <state key="normal" image="bugReport"/>
+                                <connections>
+                                    <action selector="reportABug:" destination="ef4-Rs-TpB" eventType="touchUpInside" id="afg-Pc-ohu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-fK-FXG">
+                                <rect key="frame" x="81" y="331" width="216" height="75"/>
+                                <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="likeFacebookPage:" destination="ef4-Rs-TpB" eventType="touchUpInside" id="M39-ho-4qy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-jo-4Pe">
+                                <rect key="frame" x="20" y="7" width="70" height="37"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="wKK-Xz-E8v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7iu-BB-Zqa" firstAttribute="leading" secondItem="vm0-ov-7Sc" secondAttribute="leadingMargin" constant="-20" id="2gf-cH-MbI"/>
+                            <constraint firstItem="Nhv-fK-FXG" firstAttribute="top" secondItem="yFR-ME-uAc" secondAttribute="bottom" constant="311" id="78T-oD-VQg"/>
+                            <constraint firstItem="2a1-AB-ABM" firstAttribute="top" secondItem="yFR-ME-uAc" secondAttribute="bottom" constant="273" id="D7U-qR-zw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7iu-BB-Zqa" secondAttribute="trailing" constant="-20" id="Ipn-Yj-Tdi"/>
+                            <constraint firstItem="2a1-AB-ABM" firstAttribute="leading" secondItem="vm0-ov-7Sc" secondAttribute="leadingMargin" constant="77" id="M2W-ya-Hsj"/>
+                            <constraint firstItem="Nhv-fK-FXG" firstAttribute="leading" secondItem="vm0-ov-7Sc" secondAttribute="leadingMargin" constant="61" id="SCk-2J-SSx"/>
+                            <constraint firstItem="Nhv-fK-FXG" firstAttribute="centerX" secondItem="2a1-AB-ABM" secondAttribute="centerX" id="Z5d-Pr-RNf"/>
+                            <constraint firstItem="G1N-jo-4Pe" firstAttribute="top" secondItem="vm0-ov-7Sc" secondAttribute="topMargin" constant="7" id="aAW-Bh-bMA"/>
+                            <constraint firstItem="7iu-BB-Zqa" firstAttribute="top" secondItem="vm0-ov-7Sc" secondAttribute="topMargin" id="aZY-62-HJe"/>
+                            <constraint firstItem="7h6-XZ-2pb" firstAttribute="top" secondItem="Nhv-fK-FXG" secondAttribute="bottom" constant="194" id="cgo-kG-54h"/>
+                            <constraint firstItem="G1N-jo-4Pe" firstAttribute="leading" secondItem="vm0-ov-7Sc" secondAttribute="leadingMargin" id="eza-Iu-2gp"/>
+                            <constraint firstItem="7h6-XZ-2pb" firstAttribute="top" secondItem="7iu-BB-Zqa" secondAttribute="bottom" id="mOR-rQ-lbs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoP-dM-qeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="514"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="70" height="37"/>
         <image name="backGroundImgae" width="375" height="667"/>
+        <image name="bugReport" width="173" height="37"/>
+        <image name="facebook" width="236" height="54"/>
+        <image name="infoButton" width="62" height="27"/>
+        <image name="infoPage" width="375" height="667"/>
         <image name="translateButtonUnPressed" width="100" height="41"/>
     </resources>
 </document>
