@@ -92,6 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         // called when 'return' key pressed. return NO to ignore.
         self.view.endEditing(true)
+        doTranslation()
         return false
     }
     
