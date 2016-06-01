@@ -13,6 +13,7 @@
 		824CC3261CF4AD5000C0BB27 /* oldVeiwcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */; };
 		828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158541CDCF9CB00AAEA16 /* compareEmoji.swift */; };
 		828158571CDCFA9E00AAEA16 /* toText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828158561CDCFA9E00AAEA16 /* toText.swift */; };
+		82BAFB7B1CFD4F9E007B12D5 /* apcdFinalProject-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BAFB7A1CFD4F9E007B12D5 /* apcdFinalProject-Bridging-Header.m */; };
 		82CB07601CEF672D004D6FE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB075F1CEF672D004D6FE6 /* GoogleService-Info.plist */; };
 		82CCE9951CE63C8600473B53 /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CCE9941CE63C8600473B53 /* HashTable.swift */; };
 		82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D886DD1CDA5669004DDCED /* AppDelegate.swift */; };
@@ -51,6 +52,8 @@
 		824CC3251CF4AD5000C0BB27 /* oldVeiwcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oldVeiwcontroller.swift; sourceTree = "<group>"; };
 		828158541CDCF9CB00AAEA16 /* compareEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compareEmoji.swift; sourceTree = "<group>"; };
 		828158561CDCFA9E00AAEA16 /* toText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toText.swift; sourceTree = "<group>"; };
+		82BAFB791CFD4F9A007B12D5 /* apcsFinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apcsFinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		82BAFB7A1CFD4F9E007B12D5 /* apcdFinalProject-Bridging-Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "apcdFinalProject-Bridging-Header.m"; sourceTree = "<group>"; };
 		82CB075F1CEF672D004D6FE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82CCE9941CE63C8600473B53 /* HashTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
 		82D886DA1CDA5668004DDCED /* apcsFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apcsFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,15 +146,17 @@
 			children = (
 				82D886DD1CDA5669004DDCED /* AppDelegate.swift */,
 				82D886DF1CDA5669004DDCED /* ViewController.swift */,
+				828158561CDCFA9E00AAEA16 /* toText.swift */,
 				36A6EE4C1CFCE36C00C362F3 /* settingsPage.swift */,
 				824CC3271CF4B28600C0BB27 /* Old Classes */,
-				828158561CDCFA9E00AAEA16 /* toText.swift */,
 				828158541CDCF9CB00AAEA16 /* compareEmoji.swift */,
 				82D886E11CDA5669004DDCED /* Main.storyboard */,
 				82D886E41CDA5669004DDCED /* Assets.xcassets */,
 				82D886E61CDA5669004DDCED /* LaunchScreen.storyboard */,
 				82D886E91CDA5669004DDCED /* Info.plist */,
 				82CB075F1CEF672D004D6FE6 /* GoogleService-Info.plist */,
+				82BAFB7A1CFD4F9E007B12D5 /* apcdFinalProject-Bridging-Header.m */,
+				82BAFB791CFD4F9A007B12D5 /* apcsFinalProject-Bridging-Header.h */,
 			);
 			path = apcsFinalProject;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				828158551CDCF9CB00AAEA16 /* compareEmoji.swift in Sources */,
 				82D886E01CDA5669004DDCED /* ViewController.swift in Sources */,
 				82D886DE1CDA5669004DDCED /* AppDelegate.swift in Sources */,
+				82BAFB7B1CFD4F9E007B12D5 /* apcdFinalProject-Bridging-Header.m in Sources */,
 				367B03951CE42C83003422E6 /* oldCode.swift in Sources */,
 				36A6EE4D1CFCE36C00C362F3 /* settingsPage.swift in Sources */,
 				82CCE9951CE63C8600473B53 /* HashTable.swift in Sources */,
@@ -519,16 +525,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = apcsFinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = samShowalter.apcsFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "apcsFinalProject/apcsFinalProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -538,16 +547,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = apcsFinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = samShowalter.apcsFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "apcsFinalProject/apcsFinalProject-Bridging-Header.h";
 			};
 			name = Release;
 		};

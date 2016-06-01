@@ -1,6 +1,7 @@
 use_frameworks!
 
 pod 'Firebase'
+pod 'Mixpanel'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
