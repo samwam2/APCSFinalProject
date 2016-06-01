@@ -22,7 +22,7 @@
 	<string>${CURRENT_PROJECT_VERSION}</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
-	<key>LSMinimumSystemVersion</key>
-	<string>8.0</string>
+	<key>MinimumOSVersion</key>
+	<real>8</real>
 </dict>
 </plist>

@@ -12,66 +12,36 @@ import Mixpanel
 
 class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
-    
+    //Vars used
     var emojiArray: String = ""
     var textOnScreen = [String]()
+    var temp1 = "hi"
     let mixpanel = Mixpanel.sharedInstanceWithToken("d3452a9136dba1a16db29ebf8af389b8")
     
-    
-    @IBAction func crashButton(sender: AnyObject) {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["samwam2@gmail.com"])
-            mail.setMessageBody("<p>Please insert the emoji you tried to translate along with your definition for it below:     </p>", isHTML: true)
-            mail.setSubject("iOS App Chrash")
-            
-            presentViewController(mail, animated: true, completion: nil)
-        } else {
-            // show failure alert
-            print("Fail on email fix")
-        }
-
-    }
+    //Text feild for the users input
     @IBOutlet var textFeild: UITextField!
-    @IBAction func buttonTest(sender: AnyObject) {
-        doTranslation()
-//        if textOnScreen.isEmpty == true {
-//            //textOnScreen.insert("Translation:", atIndex: 0)
-//        } else {
-//            textOnScreen.removeAll()
-//        }
-//        
-//        getText()
-//        var classThing = toText(emojiArrayTemp: emojiArray)
-//        var test = toText.init(emojiArrayTemp: emojiArray)
-//        var temp1 = "hi"
-//        var temp: String = classThing.getTextOnScreen(temp1)
-//      
-//        convertedtextisHERE.text = temp
-//        print("finshed")
-//        mixpanel.track("User Translated Emojis")
-        
-    }
     
+    //Button to start the Translation
+    @IBAction func buttonTest(sender: AnyObject) { doTranslation() }
+    
+    //Func that passes the users input to the toText class and puts the values on the screen.
     func doTranslation() {
+        //If statment used so the response is cleared before it gets used to again and response dont stack up
         if textOnScreen.isEmpty == true {
             //textOnScreen.insert("Translation:", atIndex: 0)
         } else {
             textOnScreen.removeAll()
         }
-        
         getText()
         var classThing = toText(emojiArrayTemp: emojiArray)
         var test = toText.init(emojiArrayTemp: emojiArray)
-        var temp1 = "hi"
         var temp: String = classThing.getTextOnScreen(temp1)
-        
         convertedtextisHERE.text = temp
         print("finshed")
         mixpanel.track("User Translated Emojis")
     }
     
+    //Where the emojis values go
     @IBOutlet var convertedtextisHERE: UILabel!
     
 
@@ -88,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
         print("Memory warning, FIX SAM")
     }
     
-    
+    //Hides the keyboard and starts the Translation when the user presses the return key.
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         // called when 'return' key pressed. return NO to ignore.
         self.view.endEditing(true)
@@ -97,15 +67,10 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
     }
     
     
-    
+    //Assigns the emojiArray to the textField that the user entered
     func getText() { emojiArray = textFeild.text! }
-    
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    
 }
+//Hides the keyboard when the user taps out of it.
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
