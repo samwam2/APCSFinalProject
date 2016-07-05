@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
         var temp: String = classThing.getTextOnScreen(temp1)
         convertedtextisHERE.text = temp
         print("finshed")
+        //Should hide the keybord
+        view.endEditing(true)
         mixpanel.track("User Translated Emojis")
     }
     
@@ -69,7 +71,8 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewCo
     
     //Assigns the emojiArray to the textField that the user entered
     func getText() { emojiArray = textFeild.text! }
-}
+    
+} //Closing braket for the class
 //Hides the keyboard when the user taps out of it.
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
