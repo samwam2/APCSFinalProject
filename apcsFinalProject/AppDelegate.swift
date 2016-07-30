@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import Mixpanel
 
 @UIApplicationMain
@@ -17,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mixpanel = Mixpanel.sharedInstanceWithToken("d3452a9136dba1a16db29ebf8af389b8")
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        FIRApp.configure()
-       // FIRAnalytics.
+       
         mixpanel.track("App Opened")
         // Override point for customization after application launch.
         return true
